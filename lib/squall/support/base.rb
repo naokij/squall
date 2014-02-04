@@ -47,7 +47,7 @@ module Squall
         c.response :json
         c.adapter :net_http
         if Squall.config[:debug]
-         c.use Faraday::Response::Logger
+          c.use Faraday::Response::Logger
         end
       end
 
