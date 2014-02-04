@@ -273,8 +273,8 @@ module Squall
     #
     # Returns a Hash.
     def console(id)
-      response = request(:post, "/virtual_machines/#{id}/console.json")
-      response['virtual_machine']
+      response = request(:get, "/virtual_machines/#{id}/console.json")
+      response['remote_access_session']
     end
 
     # Public: Get billing statistics for a virtual machine.
