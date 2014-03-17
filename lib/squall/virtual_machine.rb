@@ -291,10 +291,10 @@ module Squall
     #
     # id - ID of the virtual machine
     #
-    # Returns an Array.
+    # Returns an Array of transaction objects.
     def transactions(id)
       response = request(:get, "/virtual_machines/#{id}/transactions.json")
-      response['transactions']
+      response
     end
   end
 end
