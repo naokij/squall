@@ -286,5 +286,15 @@ module Squall
       response = request(:post, "/virtual_machines/#{id}/vm_stats.json")
       response['virtual_machine']
     end
+
+    # Public: Get transactions for a virtual machine.
+    #
+    # id - ID of the virtual machine
+    #
+    # Returns an Array.
+    def transactions(id)
+      response = request(:post, "/virtual_machines/#{id}/vm_stats.json")
+      response['transactions']
+    end
   end
 end
