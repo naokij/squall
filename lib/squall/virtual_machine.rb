@@ -293,7 +293,7 @@ module Squall
     #
     # Returns an Array.
     def transactions(id)
-      response = request(:post, "/virtual_machines/#{id}/vm_stats.json")
+      response = request(:get, "/virtual_machines/#{id}/transactions.json")
       response['transactions']
     end
   end
