@@ -19,5 +19,12 @@ module Squall
       response = request(:post, "/templates/#{id}/make_public.json")
       response.first[1]
     end
+
+    # Public: Lists grouped templates in the template store.
+    #
+    # Returns an Array.
+    def template_store
+      response = request(:get, '/template_store.json')
+    end
   end
 end
