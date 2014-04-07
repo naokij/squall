@@ -44,7 +44,6 @@ module Squall
         c.basic_auth Squall.config[:username], Squall.config[:password]
         c.params = (options[:query] || {})
         c.request :url_encoded
-        c.response :json
         c.adapter :net_http
         if Squall.config[:debug]
           c.use Faraday::Response::Logger
@@ -54,7 +53,7 @@ module Squall
       response = conn.send(request_method, path)
 
       @success = (200..207).include?(response.env[:status])
-      @result  = response.body
+      @result  = JSON.parse response.body unless response.body.strip.empty?
     end
 
     # Public: Ensures `Squall.config` is set.

@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "squall"
 
   s.add_runtime_dependency 'faraday',            '~> 0.9.0'
-  s.add_runtime_dependency 'faraday_middleware', '~> 0.9.0'
   s.add_runtime_dependency 'json',               '~> 1.7'
   s.add_development_dependency 'rspec',         '~> 2.10.0'
   s.add_development_dependency 'fakeweb',       '~> 1.3'
