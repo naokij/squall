@@ -306,4 +306,5 @@ module Squall
       response = request(:get, "/virtual_machines/#{id}/cpu_usage.json")
       response
     end
+  end
 end
