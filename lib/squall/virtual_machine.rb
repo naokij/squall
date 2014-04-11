@@ -296,5 +296,14 @@ module Squall
       response = request(:get, "/virtual_machines/#{id}/transactions.json")
       response
     end
-  end
+
+    # Public: Get CPU stats for a virtual machine.
+    #
+    # id - ID of the virtual machine
+    #
+    # Returns an Array of CPU usage objects.
+    def cpu_usages(id)
+      response = request(:get, "/virtual_machines/#{id}/cpu_usage.json")
+      response
+    end
 end
