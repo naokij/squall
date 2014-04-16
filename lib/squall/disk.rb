@@ -162,6 +162,16 @@ module Squall
       response.collect { |i| i['backup'] }
     end
 
+    # Public: Create a backup for a disk
+    #
+    # id - ID of the disk
+    #
+    # Returns a backup object.
+    def request_backup(id)
+      response = request(:post, "/settings/disks/#{id}/backups.json")
+      response['backup']
+    end
+
     # Public: Delete a disk.
     #
     # id - ID of the disk
