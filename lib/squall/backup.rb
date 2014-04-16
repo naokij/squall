@@ -1,6 +1,16 @@
 module Squall
   # OnApp Backups
   class Backup < Base
+    # Public: Get info for a backup.
+    #
+    # id - ID of the backup
+    #
+    # Returns a Hash.
+    def show(id)
+      response = request(:get, "/backups/#{id}.json")
+      response["backup"]
+    end
+
     # Public: Restore backup.
     #
     # id - ID of the backup to restore
