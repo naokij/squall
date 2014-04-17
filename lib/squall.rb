@@ -29,7 +29,7 @@ module Squall
   autoload :HypervisorZone, 'squall/hypervisor_zone'
   autoload :Disk,           'squall/disk'
   autoload :Backup,         'squall/backup'
-  autoload :dns_zone,       'squall/dns_zone'
+  autoload :DnsZone,        'squall/dns_zone'
 
   extend self
 
