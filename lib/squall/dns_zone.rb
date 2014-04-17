@@ -39,5 +39,23 @@ module Squall
     def delete(id)
       request(:delete, "/dns_zones/#{id}.json")
     end
+
+    # Public: Grabs all the records associated with a DNS zone.
+    #
+    # id - ID of the DNS zone
+    #
+    # Returns a Hash.
+    def records(id)
+      request(:get, "/dns_zones/#{id}/records.json")
+      response['dns_zone']
+    end
+
+    # Public: Grabs the configured nameservers.
+    #
+    # Returns an array of records.
+    def nameservers
+      response = request(:get, "/settings/dns_zones/name-servers.json")
+      response['dns_zones']
+    end
   end
 end
