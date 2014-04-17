@@ -46,7 +46,7 @@ module Squall
     #
     # Returns a Hash.
     def records(id)
-      request(:get, "/dns_zones/#{id}/records.json")
+      response = request(:get, "/dns_zones/#{id}/records.json")
       response['dns_zone']
     end
 
