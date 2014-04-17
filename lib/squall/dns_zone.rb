@@ -27,7 +27,7 @@ module Squall
     #
     # Returns a Hash.
     def create(options = {})
-      response = request(:post, "/dns_zones.json", query: { pack: options })
+      response = request(:post, "/dns_zones.json", default_params(options))
       response['dns_zone']
     end
 
