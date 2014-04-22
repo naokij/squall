@@ -67,10 +67,9 @@ module Squall
     # record_id - ID of the Record
     # options - dns_record hash
     #
-    # Returns a DNS Record hash.
+    # Returns nothing.
     def edit_record(zone_id, record_id, options)
-      response = request(:put, "/dns_zones/#{zone_id}/records/#{record_id}.json", query_params(options))
-      response['dns_record']
+      request(:put, "/dns_zones/#{zone_id}/records/#{record_id}.json", query_params(options))
     end
 
     # Public: Deletes a DNS Zone Record in a DNS Zone.
