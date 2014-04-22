@@ -31,7 +31,7 @@ module Squall
     #
     # Returns a Hash.
     def query_params(*options)
-      options.empty? ? {} : { query: options }
+      options.empty? ? {} : { query: options.first }
     end
 
     # Public: Performs an HTTP Request
