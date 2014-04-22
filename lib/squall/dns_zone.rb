@@ -57,7 +57,7 @@ module Squall
     #
     # Returns a DNS Record hash.
     def create_record(zone_id, options)
-      response = request(:post, "/dns_zones/#{zone_id}/records.json", options)
+      response = request(:post, "/dns_zones/#{zone_id}/records.json", query_params(options))
       response['dns_record']
     end
 
@@ -69,7 +69,7 @@ module Squall
     #
     # Returns a DNS Record hash.
     def edit_record(zone_id, record_id, options)
-      response = request(:put, "/dns_zones/#{zone_id}/records/#{record_id}.json", options)
+      response = request(:put, "/dns_zones/#{zone_id}/records/#{record_id}.json", query_params(options))
       response['dns_record']
     end
 

@@ -21,6 +21,19 @@ module Squall
       options.empty? ? {} : { query: { key_for_class => options.first } }
     end
 
+    # Public: Just merges `options`
+    #
+    # *options - One or more options
+    #
+    # Example
+    #
+    #     query_params(something: 1)
+    #
+    # Returns a Hash.
+    def query_params(*options)
+      options.empty? ? {} : { query: options }
+    end
+
     # Public: Performs an HTTP Request
     #
     # request_method - The HTTP verb for the request, one of
