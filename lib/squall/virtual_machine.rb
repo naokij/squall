@@ -306,5 +306,16 @@ module Squall
       response = request(:get, "/virtual_machines/#{id}/cpu_usage.json")
       response
     end
+
+    # Public: Get Network stats for a virtual machine.
+    #
+    # id - ID of the virtual machine
+    # network_id - Network Interface to check against
+    #
+    # Returns an Array of Network Hourly Stat Objects objects.
+    def network_usages(id, network_id)
+      response = request(:get, "/virtual_machines/#{id}/network_interfaces/#{network_id}/usage.json")
+      response
+    end
   end
 end
