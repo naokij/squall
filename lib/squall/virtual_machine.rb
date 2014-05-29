@@ -307,12 +307,22 @@ module Squall
       response
     end
 
+    # Public: Get Network Interfaces for a virtual machine.
+    #
+    # id - ID of the virtual machine
+    #
+    # Returns an Array of Network Interface objects.
+    def network_interfaces(id)
+      response = request(:get, "/virtual_machines/#{id}/network_interfaces.json")
+      response
+    end
+
     # Public: Get Network stats for a virtual machine.
     #
     # id - ID of the virtual machine
-    # network_id - Network Interface to check against
+    # network_id - Network Interface ID to check against
     #
-    # Returns an Array of Network Hourly Stat Objects objects.
+    # Returns an Array of Network Hourly Stat objects.
     def network_usages(id, network_id)
       response = request(:get, "/virtual_machines/#{id}/network_interfaces/#{network_id}/usage.json")
       response
