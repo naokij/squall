@@ -1,4 +1,4 @@
-Squall [![Squall Build Status][Build Icon]][Build Status]
+Squall
 =========================================================
 
 A Ruby library for working with the [OnApp REST API][].
