@@ -6,12 +6,15 @@ A Ruby library for working with the [OnApp REST API][].
 Squall has been tested on MRI versions 1.9.2, 1.9.3, 2.0.0 and 1.9-compatible
 JRuby.
 
-Documentation is available in [TomDoc][] format.
+This is a fork of the [Squall Library](https://github.com/site5/squall/) originally 
+written by Site5 and updated by myself (Suhail Patel) to add some modules and update 
+some bits to use the OnApp 3.1 API.
 
-[Build Status]: http://travis-ci.org/site5/squall
-[Build Icon]: https://secure.travis-ci.org/site5/squall.png?branch=master
+This is an experimental fork and should only be used after testing with a proper
+3.1 instance. The current tests still utilise the Site5 v2.3 OnApp API fork but
+most bits should work with little tweaking on OnApp 3.1
+
 [OnApp REST API]: http://onapp.com/cloud/technology/api/
-[TomDoc]: http://site5.github.io/squall/
 
 Install
 -------
@@ -19,14 +22,8 @@ Install
 To install Squall using [Bundler](http://bundler.io):
 
 ```
-echo "gem 'squall'" >> Gemfile
+echo "gem 'squall', git: 'http://github.com/suhailpatel/squall.git'" >> Gemfile
 bundle install
-```
-
-To install Squall globally using RubyGems:
-
-```
-gem install squall
 ```
 
 Configuration
@@ -103,7 +100,7 @@ vm.create params
 Supported Methods
 -----------------
 
-This gem partially implements the OnApp API v2.3.
+This gem partially implements the OnApp API v3.0+
 
 The following OnApp modules have been added:
 
@@ -124,6 +121,8 @@ The following OnApp modules have been added:
 * Virtual machines
 * Whitelists
 * Disks
+* DNS Zones
+* Backups
 
 The following still need to be added:
 
@@ -138,7 +137,6 @@ The following still need to be added:
 * CDN edge servers
 * CDN resources
 * CDN edge groups
-* Backups
 * Autobackup Presets
 * Schedules
 * SSH keys
@@ -185,3 +183,4 @@ Copyright
 ---------
 
 Copyright (c) 2010-2014 Site5.com. See LICENSE for details.
+Updated by Suhail Patel (suhail@onapp.com) for OnApp 3.1
