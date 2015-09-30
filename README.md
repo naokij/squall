@@ -7,8 +7,7 @@ Squall has been tested on MRI versions 1.9.2, 1.9.3, 2.0.0 and 1.9-compatible
 JRuby.
 
 This is a fork of the [Squall Library](https://github.com/site5/squall/) originally 
-written by Site5 and updated by myself (Suhail Patel) to add some modules and update 
-some bits to use the OnApp 3.1 API.
+written by Site5 and updated for current needs of cloudnet project (https://github.com/OnApp/cloudnet).
 
 This is an experimental fork and should only be used after testing with a proper
 3.1 instance. The current tests still utilise the Site5 v2.3 OnApp API fork but
@@ -22,7 +21,7 @@ Install
 To install Squall using [Bundler](http://bundler.io):
 
 ```
-echo "gem 'squall', git: 'http://github.com/suhailpatel/squall.git'" >> Gemfile
+echo "gem 'squall', git: 'https://github.com/OnApp/squall'" >> Gemfile
 bundle install
 ```
 
@@ -183,4 +182,4 @@ Copyright
 ---------
 
 Copyright (c) 2010-2014 Site5.com. See LICENSE for details.
-Updated by Suhail Patel (suhail@onapp.com) for OnApp 3.1
+Updated by Suhail Patel (suhail@onapp.com), Tomasz Widuch (tomasz@onapp.com)

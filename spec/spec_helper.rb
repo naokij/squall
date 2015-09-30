@@ -17,6 +17,8 @@ VCR.config do |c|
   c.filter_sensitive_data("<PASS>") { Squall.config[:password] }
 end
 
+FakeWeb.allow_net_connect = true if ENV['RERECORD']
+
 RSpec.configure do |c|
   c.extend VCR::RSpec::Macros
   c.before(:each) do
