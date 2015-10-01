@@ -9,7 +9,7 @@ module Squall
       response.collect {|s| s["vm_stat"]}
     end
     
-    # Public: Get zone cloud score.
+    # Public: Get federated zone cloud score.
     # https://docs.onapp.com/pages/viewpage.action?pageId=36605060
     
     # Returns an Array.
