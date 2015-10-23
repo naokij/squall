@@ -166,10 +166,9 @@ module Squall
     #
     # id - ID of the disk
     #
-    # Returns a backup object.
+    # Returns nothing.
     def request_backup(id)
-      response = request(:post, "/settings/disks/#{id}/backups.json")
-      response['backup']
+      request(:post, "/settings/disks/#{id}/backups.json")
     end
 
     # Public: Delete a disk.
