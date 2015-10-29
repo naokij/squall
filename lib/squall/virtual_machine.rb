@@ -289,10 +289,11 @@ module Squall
     # Public: Get transactions for a virtual machine.
     #
     # id - ID of the virtual machine
+    # number - number of transactions returned
     #
     # Returns an Array of transaction objects.
-    def transactions(id)
-      response = request(:get, "/virtual_machines/#{id}/transactions.json")
+    def transactions(id, number = 10)
+      response = request(:get, "/virtual_machines/#{id}/transactions.json/per_page/#{number}")
       response
     end
 

@@ -5,9 +5,12 @@ pkg/*
 *.swp
 *.rbc
 test.rb
+.rbenv-gemsets
+.ruby-version
 *~
 coverage/
 doc/
+gems/*
 TODO
 Gemfile.lock
 .rvmrc

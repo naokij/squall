@@ -3,9 +3,11 @@ module Squall
   class Transaction < Base
     # Public: Lists all transactions.
     #
+    # number - number of transactions returned
+    #
     # Returns an Array.
-    def list
-      response = request :get, '/transactions.json'
+    def list(number = 10)
+      response = request :get, "/transactions.json/per_page/#{number}"
       response.collect { |t| t['transaction'] }
     end
 

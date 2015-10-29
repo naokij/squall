@@ -9,6 +9,15 @@ module Squall
       response.collect { |temp| temp['image_template'] }
     end
 
+    # Public: Get template details.
+    #
+    # id - ID of the template
+    #
+    # Returns a Hash.
+    def show(id)
+      request(:get, "/templates/#{id}.json")
+    end
+    
     # Public: Make a Template public so that it can be downloaded via a HTTP
     # URL.
     #
