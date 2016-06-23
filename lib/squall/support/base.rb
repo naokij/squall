@@ -63,7 +63,10 @@ module Squall
         end
       end
 
-      response = conn.send(request_method, path)
+      response = conn.send(request_method, path) do |c|
+        c.options[:timeout] = (options[:timeout] || nil)
+        c.options[:open_timeout] = (options[:open_timeout] || nil)
+      end
 
       @success = (200..207).include?(response.env[:status])
       @result  = JSON.parse response.body unless response.body.strip.empty?
